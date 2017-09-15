@@ -1,0 +1,53 @@
+{
+    "name": "alexbowers/laravel-timepiece",
+    "description": "A Laravel 5 package to interact with timeseries databases.",
+    "keywords": [
+        "influx",
+        "timeseries",
+        "influxdb",
+        "influxdata",
+        "grafana",
+        "graphite",
+        "telegraf",
+        "chronograf",
+        "time series",
+        "laravel"
+    ],
+    "homepage": "https://github.com/alexbowers/laravel-timepiece",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Bowers",
+            "email": "bowersbros@gmail.com",
+            "homepage": "https://zando.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.9",
+        "orchestra/testbench": "^3.5",
+        "phpunit/phpunit": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "AlexBowers\\Timepiece\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AlexBowers\\Timepiece\\Tests": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": []
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
