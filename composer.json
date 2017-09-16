@@ -24,7 +24,8 @@
         }
     ],
     "require": {
-        "php": "^7.0"
+        "php": "^7.0",
+        "influxdb/influxdb-php": "^1.14"
     },
     "require-dev": {
         "mockery/mockery": "^0.9.9",
@@ -38,13 +39,14 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "AlexBowers\\Timepiece\\Tests": "tests"
+            "AlexBowers\\Timepiece\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
-            "providers": [],
-            "aliases": []
+            "providers": [
+                "AlexBowers\\Timepiece\\TimepieceServiceProvider"
+            ]
         }
     },
     "config": {
