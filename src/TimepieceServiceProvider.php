@@ -49,7 +49,7 @@ class TimepieceServiceProvider extends ServiceProvider
         $this->app->bind(Connection::class, function () {
             switch (config('timepiece.use')) {
                 case 'influx':
-                    return app(InfluxConnection::class);
+                    return app(Drivers\Influx\Connection::class);
                     break;
                 default:
                     throw new \Exception("Unexpected timepiece type.");

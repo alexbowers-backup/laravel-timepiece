@@ -2,7 +2,6 @@
 
 namespace AlexBowers\Timepiece;
 
-use AlexBowers\Timepiece\Schema\Builder;
 use Illuminate\Support\Str;
 
 class Timepiece

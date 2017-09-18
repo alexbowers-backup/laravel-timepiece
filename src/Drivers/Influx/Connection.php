@@ -1,11 +1,11 @@
 <?php
 
-namespace AlexBowers\Timepiece;
+namespace AlexBowers\Timepiece\Drivers\Influx;
 
-use AlexBowers\Timepiece\Schema\InfluxBuilder;
+use AlexBowers\Timepiece\Connection as CoreConnection;
 use InfluxDB\Client;
 
-class InfluxConnection extends Connection
+class Connection extends CoreConnection
 {
     protected $client;
 
@@ -17,7 +17,7 @@ class InfluxConnection extends Connection
     public function getBuilder(string $database)
     {
 
-        return new InfluxBuilder(
+        return new Builder(
             $this->client->selectDB($database)
         );
     }

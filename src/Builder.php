@@ -1,20 +1,29 @@
 <?php
 
-namespace AlexBowers\Timepiece\Schema;
+namespace AlexBowers\Timepiece;
 
 class Builder
 {
     protected $client;
 
-    protected $select = ['*'];
+    public $select = ['*'];
 
-    protected $where = [];
+    public $from;
 
-    protected $limit;
+    public $where = [];
+
+    public $limit;
 
     public function select($fields = '*')
     {
         $this->select = (array) $fields;
+
+        return $this;
+    }
+
+    public function from($from)
+    {
+        $this->from = $from;
 
         return $this;
     }
